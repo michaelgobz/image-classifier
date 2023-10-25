@@ -3,7 +3,7 @@
 # */AIPND-revision/intropyproject-classify-pet-images/check_images.py
 #
 # TODO 0: Add your information below for Programmer & Date Created.                                                                             
-# PROGRAMMER: 
+# PROGRAMMER: Michael Goboola
 # DATE CREATED:                                  
 # REVISED DATE: 
 # PURPOSE: Classifies pet images using a pretrained CNN model, compares these
