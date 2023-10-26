@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 # */AIPND-revision/intropyproject-classify-pet-images/classify_images.py
 #                                                                             
-# PROGRAMMER: 
-# DATE CREATED:                                 
+# PROGRAMMER: Michael Goboola
+# DATE CREATED: 2023-10-26
 # REVISED DATE: 
 # PURPOSE: Create a function classify_images that uses the classifier function 
 #          to create the classifier labels and then compares the classifier 
@@ -20,7 +20,8 @@
 #           of the pet and classifier labels as the item at index 2 of the list.
 #
 ##
-# Imports classifier function for using CNN to classify images 
+# Imports classifier function for using CNN to classify images
+from os import listdir, path
 from classifier import classifier 
 
 # TODO 3: Define classify_images function below, specifically replace the None
@@ -65,4 +66,26 @@ def classify_images(images_dir, results_dic, model):
      Returns:
            None - results_dic is mutable data type so no return needed.         
     """
-    None 
+    for filename in listdir(images_dir):
+        match = None
+        if filename[0] != '.':
+            image_path = path.join(images_dir, filename)
+            image_classification = classifier(image_path, model)
+            image_classification = image_classification.lower().strip()
+            if results_dic[filename][0]  == image_classification:
+                match = 1
+            else:
+                match = 0
+            if filename in results_dic:
+                results_dic[filename].extend([image_classification])
+                results_dic[filename].extend([match])
+            else:
+                print('File {} not in the results dictionary'.format(filename))
+                results_dic[filename] = [image_classification]
+            if results_dic[filename][0] in image_classification:
+                results_dic[filename].extend([1])
+            else:
+                results_dic[filename].extend([0])
+        else:
+            print('File {} is a hidden file'.format(filename))
+    return results_dic
