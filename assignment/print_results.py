@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 # */AIPND-revision/intropyproject-classify-pet-images/print_results.py
 #                                                                             
-# PROGRAMMER: 
-# DATE CREATED:
+# PROGRAMMER: Michael Goboola
+# DATE CREATED: 2023-10-26
 # REVISED DATE: 
 # PURPOSE: Create a function print_results that prints the results statistics
 #          from the results statistics dictionary (results_stats_dic). It 
@@ -62,5 +62,37 @@ def print_results(results_dic, results_stats_dic, model,
     Returns:
            None - simply printing results.
     """    
-    None
-                
+    # Prints summary statistics over the run
+    if print_incorrect_dogs and print_incorrect_breed:
+        print("\n\n*** Results Summary for CNN Model Architecture",model.upper(),
+              "***\n Number of Images: {:>3d} \n Number of Dog Images: {:>3d} \n Number of \"Not-a\" Dog Images: {:>3d} \n % Correct Dogs: {:>3.1f} \n % Correct Breed: {:>3.1f} \n % Correct \"Not-a\" Dog: {:>3.1f}"
+              .format(results_stats_dic['n_images'],
+                      results_stats_dic['n_dogs_img'],
+                      results_stats_dic['n_notdogs_img'],
+                      results_stats_dic['pct_correct_dogs'],
+                      results_stats_dic['pct_correct_breed'],
+                      results_stats_dic['pct_correct_notdogs']))
+    elif print_incorrect_dogs:
+        print("\n\n*** Results Summary for CNN Model Architecture",model.upper(),
+              "***\n Number of Images: {:>3d} \n Number of Dog Images: {:>3d} \n Number of \"Not-a\" Dog Images: {:>3d} \n % Correct Dogs: {:>3.1f} \n % Correct \"Not-a\" Dog: {:>3.1f}"
+              .format(results_stats_dic['n_images'],
+                      results_stats_dic['n_dogs_img'],
+                      results_stats_dic['n_notdogs_img'],
+                      results_stats_dic['pct_correct_dogs'],
+                      results_stats_dic['pct_correct_notdogs']))
+    elif print_incorrect_breed:
+        print("\n\n*** Results Summary for CNN Model Architecture",model.upper(),
+              "***\n Number of Images: {:>3d} \n Number of Dog Images: {:>3d} \n Number of \"Not-a\" Dog Images: {:>3d} \n % Correct Dogs: {:>3.1f} \n % Correct Breed: {:>3.1f}"
+              .format(results_stats_dic['n_images'],
+                      results_stats_dic['n_dogs_img'],
+                      results_stats_dic['n_notdogs_img'],
+                      results_stats_dic['pct_correct_dogs'],
+                      results_stats_dic['pct_correct_breed']))
+    else:
+        print("\n\n*** Results Summary for CNN Model Architecture",model.upper(),
+              "***\n Number of Images: {:>3d} \n Number of Dog Images: {:>3d} \n Number of \"Not-a\" Dog Images: {:>3d} \n % Correct Dogs: {:>3.1f}"
+              .format(results_stats_dic['n_images'],
+                      results_stats_dic['n_dogs_img'],
+                      results_stats_dic['n_notdogs_img'],
+                      results_stats_dic['pct_correct_dogs']))
+
