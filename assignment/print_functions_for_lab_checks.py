@@ -137,7 +137,8 @@ def check_classifying_images(results_dic):
               "# NOT Matches:",n_notmatch)
 
  
-def check_classifying_labels_as_dogs(results_dic):
+def \
+        check_classifying_labels_as_dogs(results_dic):
     """    For Lab: Classifying Images - 13. Classifying Labels as Dogs
     Prints Pet Image Label, Classifier Label, whether Pet Label is-a-dog(1=Yes,
     0=No), and whether Classifier Label is-a-dog(1=Yes, 0=No) for ALL Matches 
