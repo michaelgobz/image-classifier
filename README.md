@@ -57,4 +57,4 @@ This project is licensed under the MIT License — see the LICENSE file for deta
 
 ## Author
 
-Michael Goboola - [michaelgobz]("https://github.com/michaelgobz")
+Michael Goboola - [michaelgobz](https://github.com/michaelgobz)
