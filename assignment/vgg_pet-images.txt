@@ -326,4 +326,4 @@ Pct Corr dog:  80.0 Pct Corr NOTdog:  60.0  Pct Corr Breed:  40.0
  % Correct Breed: 40.0 
  % Correct "Not-a" Dog: 60.0
 
-** Total Elapsed Runtime: 0:59:55
+** Total Elapsed Runtime: 0:0:4
