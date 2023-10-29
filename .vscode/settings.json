@@ -5,14 +5,19 @@
         "boerboel",
         "bouvier",
         "bouviers",
+        "convolutional",
+        "densenet",
         "dogfile",
         "dognames",
         "flandres",
         "intropyproject",
+        "Nanodegree",
         "notdogs",
         "resnet",
         "sibirian",
+        "squeezenet",
         "tervueren",
-        "torchvision"
+        "torchvision",
+        "Udacity"
     ]
 }

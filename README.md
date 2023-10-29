@@ -1,6 +1,6 @@
 # Image Classifier
 
-This is a project for the Udacity AI programming with python Nanodegree. 
+This is a project for the Udacity AI programming with python Nanodegree.
 It uses a pre-trained convolutional neural network (CNN) to classify images of pets into dogs or not dogs.
 
 ## Dataset
@@ -17,10 +17,10 @@ The data used to check to test the classifier is in folder `./assignment/pet_ima
 ## command line arguments
 
 There are 3 command line arguments that can be used to change the behavior of the program:
+
 - `--dir`: path to the folder with the images
 - `--arch`: CNN model architecture to use for image classification the following architectures are supported: `resnet`, `alexnet`, `vgg`, `squeezenet`, `densenet`, `inception`
 - `--dogfile`: text file that contains all the valid dog names
-
 
 ## Usage
 
@@ -30,8 +30,8 @@ There are 3 command line arguments that can be used to change the behavior of th
 4. Run `sh run_models_batch.sh` to run the models with different architectures. The results will be saved in the respective text files.
 5. Run `sh run_models_batch_uploaded.sh` to run the models with different architectures on the uploaded images. The results will be saved in the respective text files.
 
-
 ## Results
+
 These are formatted in a table in the respective text files.
 They include the following information:
 
@@ -54,5 +54,3 @@ They include the following information:
 ## License
 
 This project is licensed under the MIT License — see the LICENSE file for details.
-
-
