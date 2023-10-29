@@ -7,13 +7,13 @@ Pet Image Label Dictionary has 9 key-value pairs.
 Below are 9 of them:
  1 key: Belgian_Shepherd_Dog_Tervueren_7889.jpg  label: belgian shepherd dog tervueren
  2 key:         black_maltese_0017.jpg  label:              black maltese
- 3 key:         Brown_Maltese_2452.jpg  label:              brown maltese
- 4 key:    Dachshund_Boerboel_0017.jpg  label:         dachshund boerboel
- 5 key:        French_bulldog_0017.jpg  label:             french bulldog
- 6 key:     German_shepherd_12345.jpeg  label:            german shepherd
- 7 key:    German_shepherd_132345.jpeg  label:            german shepherd
- 8 key:     golden_retriever_12345.jpg  label:           golden retriever
- 9 key:      golden_retriever_6789.jpg  label:           golden retriever
+ 3 key:    Dachshund_Boerboel_0017.jpg  label:         dachshund boerboel
+ 4 key:     German_shepherd_12345.jpeg  label:            german shepherd
+ 5 key:     golden_retriever_12345.jpg  label:           golden retriever
+ 6 key:      golden_retriever_6789.jpg  label:           golden retriever
+ 7 key:            great_dane_0017.jpg  label:                 great dane
+ 8 key:             kelpie_132345.jpeg  label:                     kelpie
+ 9 key:     yorkshire_terrier_2452.jpg  label:          yorkshire terrier
 
      MATCH:
 
@@ -22,6 +22,15 @@ Real:           golden retriever   Classifier:               golden retriever
 
      golden_retriever_6789.jpg: 
 Real:           golden retriever   Classifier:               golden retriever
+
+           great_dane_0017.jpg: 
+Real:                 great dane   Classifier:                     great dane
+
+            kelpie_132345.jpeg: 
+Real:                     kelpie   Classifier:                         kelpie
+
+    yorkshire_terrier_2452.jpg: 
+Real:          yorkshire terrier   Classifier:              yorkshire terrier
 
  NOT A MATCH:
 
@@ -31,23 +40,14 @@ Real: belgian shepherd dog tervueren   Classifier:              eskimo dog, husk
         black_maltese_0017.jpg: 
 Real:              black maltese   Classifier: bouvier des flandres, bouviers des flandres
 
-        Brown_Maltese_2452.jpg: 
-Real:              brown maltese   Classifier:              yorkshire terrier
-
    Dachshund_Boerboel_0017.jpg: 
 Real:         dachshund boerboel   Classifier:    doberman, doberman pinscher
-
-       French_bulldog_0017.jpg: 
-Real:             french bulldog   Classifier:                     great dane
 
     German_shepherd_12345.jpeg: 
 Real:            german shepherd   Classifier: german shepherd, german shepherd dog, german police dog, alsatian
 
-   German_shepherd_132345.jpeg: 
-Real:            german shepherd   Classifier:                         kelpie
-
-# Total Images 9 # Matches: 2 # NOT Matches: 7
-{'Belgian_Shepherd_Dog_Tervueren_7889.jpg': ['belgian shepherd dog tervueren', 'eskimo dog, husky', 0, 0], 'black_maltese_0017.jpg': ['black maltese', 'bouvier des flandres, bouviers des flandres', 0, 0], 'Brown_Maltese_2452.jpg': ['brown maltese', 'yorkshire terrier', 0, 0], 'Dachshund_Boerboel_0017.jpg': ['dachshund boerboel', 'doberman, doberman pinscher', 0, 0], 'French_bulldog_0017.jpg': ['french bulldog', 'great dane', 0, 0], 'German_shepherd_12345.jpeg': ['german shepherd', 'german shepherd, german shepherd dog, german police dog, alsatian', 0, 1], 'German_shepherd_132345.jpeg': ['german shepherd', 'kelpie', 0, 0], 'golden_retriever_12345.jpg': ['golden retriever', 'golden retriever', 1, 1], 'golden_retriever_6789.jpg': ['golden retriever', 'golden retriever', 1, 1]}
+# Total Images 9 # Matches: 5 # NOT Matches: 4
+{'Belgian_Shepherd_Dog_Tervueren_7889.jpg': ['belgian shepherd dog tervueren', 'eskimo dog, husky', 0, 0], 'black_maltese_0017.jpg': ['black maltese', 'bouvier des flandres, bouviers des flandres', 0, 0], 'Dachshund_Boerboel_0017.jpg': ['dachshund boerboel', 'doberman, doberman pinscher', 0, 0], 'German_shepherd_12345.jpeg': ['german shepherd', 'german shepherd, german shepherd dog, german police dog, alsatian', 0, 1], 'golden_retriever_12345.jpg': ['golden retriever', 'golden retriever', 1, 1], 'golden_retriever_6789.jpg': ['golden retriever', 'golden retriever', 1, 1], 'great_dane_0017.jpg': ['great dane', 'great dane', 1, 1], 'kelpie_132345.jpeg': ['kelpie', 'kelpie', 1, 1], 'yorkshire_terrier_2452.jpg': ['yorkshire terrier', 'yorkshire terrier', 1, 1]}
 
      MATCH:
 
@@ -57,6 +57,18 @@ PetLabelDog: 1  ClassLabelDog: 1
 
      golden_retriever_6789.jpg: 
 Real:           golden retriever   Classifier:               golden retriever  
+PetLabelDog: 1  ClassLabelDog: 1
+
+           great_dane_0017.jpg: 
+Real:                 great dane   Classifier:                     great dane  
+PetLabelDog: 1  ClassLabelDog: 1
+
+            kelpie_132345.jpeg: 
+Real:                     kelpie   Classifier:                         kelpie  
+PetLabelDog: 1  ClassLabelDog: 1
+
+    yorkshire_terrier_2452.jpg: 
+Real:          yorkshire terrier   Classifier:              yorkshire terrier  
 PetLabelDog: 1  ClassLabelDog: 1
 
  NOT A MATCH:
@@ -69,43 +81,31 @@ PetLabelDog: 0  ClassLabelDog: 0
 Real:              black maltese   Classifier: bouvier des flandres, bouviers des flandres  
 PetLabelDog: 0  ClassLabelDog: 0
 
-        Brown_Maltese_2452.jpg: 
-Real:              brown maltese   Classifier:              yorkshire terrier  
-PetLabelDog: 0  ClassLabelDog: 0
-
    Dachshund_Boerboel_0017.jpg: 
 Real:         dachshund boerboel   Classifier:    doberman, doberman pinscher  
 PetLabelDog: 0  ClassLabelDog: 0
-
-       French_bulldog_0017.jpg: 
-Real:             french bulldog   Classifier:                     great dane  
-PetLabelDog: 0  ClassLabelDog: 1
 
     German_shepherd_12345.jpeg: 
 Real:            german shepherd   Classifier: german shepherd, german shepherd dog, german police dog, alsatian  
 PetLabelDog: 1  ClassLabelDog: 0
 
-   German_shepherd_132345.jpeg: 
-Real:            german shepherd   Classifier:                         kelpie  
-PetLabelDog: 0  ClassLabelDog: 0
-
-# Total Images 9 # Matches: 2 # NOT Matches: 7
+# Total Images 9 # Matches: 5 # NOT Matches: 4
 
  ** Statistics from calculates_results_stats() function:
-N Images:  9  N Dog Images:  3  N NotDog Images:  6 
-Pct Corr dog:  66.7 Pct Corr NOTdog:  83.3  Pct Corr Breed:  66.7
+N Images:  9  N Dog Images:  6  N NotDog Images:  3 
+Pct Corr dog:  83.3 Pct Corr NOTdog: 100.0  Pct Corr Breed:  83.3
 
  ** Check Statistics - calculated from this function as a check:
-N Images:  9  N Dog Images:  3  N NotDog Images:  6 
-Pct Corr dog:  66.7 Pct Corr NOTdog:  83.3  Pct Corr Breed:  66.7
+N Images:  9  N Dog Images:  6  N NotDog Images:  3 
+Pct Corr dog:  83.3 Pct Corr NOTdog: 100.0  Pct Corr Breed:  83.3
 
 
 *** Results Summary for CNN Model Architecture RESNET ***
  Number of Images:   9 
- Number of Dog Images:   3 
- Number of "Not-a" Dog Images:   6 
- % Correct Dogs: 66.7 
- % Correct Breed: 66.7 
- % Correct "Not-a" Dog: 83.3
+ Number of Dog Images:   6 
+ Number of "Not-a" Dog Images:   3 
+ % Correct Dogs: 83.3 
+ % Correct Breed: 83.3 
+ % Correct "Not-a" Dog: 100.0
 
 ** Total Elapsed Runtime: 0:0:0
