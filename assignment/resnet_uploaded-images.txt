@@ -5,14 +5,14 @@ Command Line Arguments:
 
 Pet Image Label Dictionary has 9 key-value pairs.
 Below are 9 of them:
- 1 key: Belgian_Shepherd_Dog_Tervueren_7889.jpg  label: belgian shepherd dog tervueren
- 2 key:         black_maltese_0017.jpg  label:              black maltese
- 3 key:    Dachshund_Boerboel_0017.jpg  label:         dachshund boerboel
- 4 key:     German_shepherd_12345.jpeg  label:            german shepherd
- 5 key:     golden_retriever_12345.jpg  label:           golden retriever
- 6 key:      golden_retriever_6789.jpg  label:           golden retriever
- 7 key:            great_dane_0017.jpg  label:                 great dane
- 8 key:             kelpie_132345.jpeg  label:                     kelpie
+ 1 key:  bouvier_des_flandres_0017.jpg  label:       bouvier des flandres
+ 2 key:     doberman_pinscher_0017.jpg  label:          doberman pinscher
+ 3 key:     German_shepherd_12345.jpeg  label:            german shepherd
+ 4 key:     golden_retriever_12345.jpg  label:           golden retriever
+ 5 key:      golden_retriever_6789.jpg  label:           golden retriever
+ 6 key:            great_dane_0017.jpg  label:                 great dane
+ 7 key:             kelpie_132345.jpeg  label:                     kelpie
+ 8 key:       sibirian_ husky_7889.jpg  label:                   sibirian
  9 key:     yorkshire_terrier_2452.jpg  label:          yorkshire terrier
 
      MATCH:
@@ -34,20 +34,20 @@ Real:          yorkshire terrier   Classifier:              yorkshire terrier
 
  NOT A MATCH:
 
-Belgian_Shepherd_Dog_Tervueren_7889.jpg: 
-Real: belgian shepherd dog tervueren   Classifier:              eskimo dog, husky
+ bouvier_des_flandres_0017.jpg: 
+Real:       bouvier des flandres   Classifier: bouvier des flandres, bouviers des flandres
 
-        black_maltese_0017.jpg: 
-Real:              black maltese   Classifier: bouvier des flandres, bouviers des flandres
-
-   Dachshund_Boerboel_0017.jpg: 
-Real:         dachshund boerboel   Classifier:    doberman, doberman pinscher
+    doberman_pinscher_0017.jpg: 
+Real:          doberman pinscher   Classifier:    doberman, doberman pinscher
 
     German_shepherd_12345.jpeg: 
 Real:            german shepherd   Classifier: german shepherd, german shepherd dog, german police dog, alsatian
 
+      sibirian_ husky_7889.jpg: 
+Real:                   sibirian   Classifier:              eskimo dog, husky
+
 # Total Images 9 # Matches: 5 # NOT Matches: 4
-{'Belgian_Shepherd_Dog_Tervueren_7889.jpg': ['belgian shepherd dog tervueren', 'eskimo dog, husky', 0, 0], 'black_maltese_0017.jpg': ['black maltese', 'bouvier des flandres, bouviers des flandres', 0, 0], 'Dachshund_Boerboel_0017.jpg': ['dachshund boerboel', 'doberman, doberman pinscher', 0, 0], 'German_shepherd_12345.jpeg': ['german shepherd', 'german shepherd, german shepherd dog, german police dog, alsatian', 0, 1], 'golden_retriever_12345.jpg': ['golden retriever', 'golden retriever', 1, 1], 'golden_retriever_6789.jpg': ['golden retriever', 'golden retriever', 1, 1], 'great_dane_0017.jpg': ['great dane', 'great dane', 1, 1], 'kelpie_132345.jpeg': ['kelpie', 'kelpie', 1, 1], 'yorkshire_terrier_2452.jpg': ['yorkshire terrier', 'yorkshire terrier', 1, 1]}
+{'bouvier_des_flandres_0017.jpg': ['bouvier des flandres', 'bouvier des flandres, bouviers des flandres', 0, 1], 'doberman_pinscher_0017.jpg': ['doberman pinscher', 'doberman, doberman pinscher', 0, 1], 'German_shepherd_12345.jpeg': ['german shepherd', 'german shepherd, german shepherd dog, german police dog, alsatian', 0, 1], 'golden_retriever_12345.jpg': ['golden retriever', 'golden retriever', 1, 1], 'golden_retriever_6789.jpg': ['golden retriever', 'golden retriever', 1, 1], 'great_dane_0017.jpg': ['great dane', 'great dane', 1, 1], 'kelpie_132345.jpeg': ['kelpie', 'kelpie', 1, 1], 'sibirian_ husky_7889.jpg': ['sibirian', 'eskimo dog, husky', 0, 0], 'yorkshire_terrier_2452.jpg': ['yorkshire terrier', 'yorkshire terrier', 1, 1]}
 
      MATCH:
 
@@ -73,39 +73,39 @@ PetLabelDog: 1  ClassLabelDog: 1
 
  NOT A MATCH:
 
-Belgian_Shepherd_Dog_Tervueren_7889.jpg: 
-Real: belgian shepherd dog tervueren   Classifier:              eskimo dog, husky  
-PetLabelDog: 0  ClassLabelDog: 0
+ bouvier_des_flandres_0017.jpg: 
+Real:       bouvier des flandres   Classifier: bouvier des flandres, bouviers des flandres  
+PetLabelDog: 1  ClassLabelDog: 1
 
-        black_maltese_0017.jpg: 
-Real:              black maltese   Classifier: bouvier des flandres, bouviers des flandres  
-PetLabelDog: 0  ClassLabelDog: 0
-
-   Dachshund_Boerboel_0017.jpg: 
-Real:         dachshund boerboel   Classifier:    doberman, doberman pinscher  
-PetLabelDog: 0  ClassLabelDog: 0
+    doberman_pinscher_0017.jpg: 
+Real:          doberman pinscher   Classifier:    doberman, doberman pinscher  
+PetLabelDog: 1  ClassLabelDog: 1
 
     German_shepherd_12345.jpeg: 
 Real:            german shepherd   Classifier: german shepherd, german shepherd dog, german police dog, alsatian  
 PetLabelDog: 1  ClassLabelDog: 0
 
+      sibirian_ husky_7889.jpg: 
+Real:                   sibirian   Classifier:              eskimo dog, husky  
+PetLabelDog: 0  ClassLabelDog: 0
+
 # Total Images 9 # Matches: 5 # NOT Matches: 4
 
  ** Statistics from calculates_results_stats() function:
-N Images:  9  N Dog Images:  6  N NotDog Images:  3 
-Pct Corr dog:  83.3 Pct Corr NOTdog: 100.0  Pct Corr Breed:  83.3
+N Images:  9  N Dog Images:  8  N NotDog Images:  1 
+Pct Corr dog:  87.5 Pct Corr NOTdog: 100.0  Pct Corr Breed:  62.5
 
  ** Check Statistics - calculated from this function as a check:
-N Images:  9  N Dog Images:  6  N NotDog Images:  3 
-Pct Corr dog:  83.3 Pct Corr NOTdog: 100.0  Pct Corr Breed:  83.3
+N Images:  9  N Dog Images:  8  N NotDog Images:  1 
+Pct Corr dog:  87.5 Pct Corr NOTdog: 100.0  Pct Corr Breed:  62.5
 
 
 *** Results Summary for CNN Model Architecture RESNET ***
  Number of Images:   9 
- Number of Dog Images:   6 
- Number of "Not-a" Dog Images:   3 
- % Correct Dogs: 83.3 
- % Correct Breed: 83.3 
+ Number of Dog Images:   8 
+ Number of "Not-a" Dog Images:   1 
+ % Correct Dogs: 87.5 
+ % Correct Breed: 62.5 
  % Correct "Not-a" Dog: 100.0
 
 ** Total Elapsed Runtime: 0:0:0
