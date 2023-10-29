@@ -12,10 +12,16 @@ Below are 9 of them:
  5 key:      golden_retriever_6789.jpg  label:           golden retriever
  6 key:            great_dane_0017.jpg  label:                 great dane
  7 key:             kelpie_132345.jpeg  label:                     kelpie
- 8 key:       sibirian_ husky_7889.jpg  label:                   sibirian
+ 8 key:        sibirian_husky_7889.jpg  label:             sibirian husky
  9 key:     yorkshire_terrier_2452.jpg  label:          yorkshire terrier
 
      MATCH:
+
+ bouvier_des_flandres_0017.jpg: 
+Real:       bouvier des flandres   Classifier:           bouvier des flandres
+
+    German_shepherd_12345.jpeg: 
+Real:            german shepherd   Classifier:                german shepherd
 
     golden_retriever_12345.jpg: 
 Real:           golden retriever   Classifier:               golden retriever
@@ -31,25 +37,27 @@ Real:          yorkshire terrier   Classifier:              yorkshire terrier
 
  NOT A MATCH:
 
- bouvier_des_flandres_0017.jpg: 
-Real:       bouvier des flandres   Classifier: bouvier des flandres, bouviers des flandres
-
     doberman_pinscher_0017.jpg: 
-Real:          doberman pinscher   Classifier:    doberman, doberman pinscher
-
-    German_shepherd_12345.jpeg: 
-Real:            german shepherd   Classifier: german shepherd, german shepherd dog, german police dog, alsatian
+Real:          doberman pinscher   Classifier:                       doberman
 
            great_dane_0017.jpg: 
-Real:                 great dane   Classifier: staffordshire bullterrier, staffordshire bull terrier
+Real:                 great dane   Classifier:      staffordshire bullterrier
 
-      sibirian_ husky_7889.jpg: 
-Real:                   sibirian   Classifier:              eskimo dog, husky
+       sibirian_husky_7889.jpg: 
+Real:             sibirian husky   Classifier:                     eskimo dog
 
-# Total Images 9 # Matches: 4 # NOT Matches: 5
-{'bouvier_des_flandres_0017.jpg': ['bouvier des flandres', 'bouvier des flandres, bouviers des flandres', 0, 1], 'doberman_pinscher_0017.jpg': ['doberman pinscher', 'doberman, doberman pinscher', 0, 1], 'German_shepherd_12345.jpeg': ['german shepherd', 'german shepherd, german shepherd dog, german police dog, alsatian', 0, 1], 'golden_retriever_12345.jpg': ['golden retriever', 'golden retriever', 1, 1], 'golden_retriever_6789.jpg': ['golden retriever', 'golden retriever', 1, 1], 'great_dane_0017.jpg': ['great dane', 'staffordshire bullterrier, staffordshire bull terrier', 0, 0], 'kelpie_132345.jpeg': ['kelpie', 'kelpie', 1, 1], 'sibirian_ husky_7889.jpg': ['sibirian', 'eskimo dog, husky', 0, 0], 'yorkshire_terrier_2452.jpg': ['yorkshire terrier', 'yorkshire terrier', 1, 1]}
+# Total Images 9 # Matches: 6 # NOT Matches: 3
+{'bouvier_des_flandres_0017.jpg': ['bouvier des flandres', 'bouvier des flandres', 1, 1], 'doberman_pinscher_0017.jpg': ['doberman pinscher', 'doberman', 0, 0], 'German_shepherd_12345.jpeg': ['german shepherd', 'german shepherd', 1, 1], 'golden_retriever_12345.jpg': ['golden retriever', 'golden retriever', 1, 1], 'golden_retriever_6789.jpg': ['golden retriever', 'golden retriever', 1, 1], 'great_dane_0017.jpg': ['great dane', 'staffordshire bullterrier', 0, 0], 'kelpie_132345.jpeg': ['kelpie', 'kelpie', 1, 1], 'sibirian_husky_7889.jpg': ['sibirian husky', 'eskimo dog', 0, 0], 'yorkshire_terrier_2452.jpg': ['yorkshire terrier', 'yorkshire terrier', 1, 1]}
 
      MATCH:
+
+ bouvier_des_flandres_0017.jpg: 
+Real:       bouvier des flandres   Classifier:           bouvier des flandres  
+PetLabelDog: 1  ClassLabelDog: 1
+
+    German_shepherd_12345.jpeg: 
+Real:            german shepherd   Classifier:                german shepherd  
+PetLabelDog: 1  ClassLabelDog: 0
 
     golden_retriever_12345.jpg: 
 Real:           golden retriever   Classifier:               golden retriever  
@@ -69,43 +77,35 @@ PetLabelDog: 1  ClassLabelDog: 1
 
  NOT A MATCH:
 
- bouvier_des_flandres_0017.jpg: 
-Real:       bouvier des flandres   Classifier: bouvier des flandres, bouviers des flandres  
-PetLabelDog: 1  ClassLabelDog: 1
-
     doberman_pinscher_0017.jpg: 
-Real:          doberman pinscher   Classifier:    doberman, doberman pinscher  
-PetLabelDog: 1  ClassLabelDog: 1
-
-    German_shepherd_12345.jpeg: 
-Real:            german shepherd   Classifier: german shepherd, german shepherd dog, german police dog, alsatian  
-PetLabelDog: 1  ClassLabelDog: 0
-
-           great_dane_0017.jpg: 
-Real:                 great dane   Classifier: staffordshire bullterrier, staffordshire bull terrier  
+Real:          doberman pinscher   Classifier:                       doberman  
 PetLabelDog: 0  ClassLabelDog: 1
 
-      sibirian_ husky_7889.jpg: 
-Real:                   sibirian   Classifier:              eskimo dog, husky  
+           great_dane_0017.jpg: 
+Real:                 great dane   Classifier:      staffordshire bullterrier  
+PetLabelDog: 0  ClassLabelDog: 1
+
+       sibirian_husky_7889.jpg: 
+Real:             sibirian husky   Classifier:                     eskimo dog  
 PetLabelDog: 0  ClassLabelDog: 0
 
-# Total Images 9 # Matches: 4 # NOT Matches: 5
+# Total Images 9 # Matches: 6 # NOT Matches: 3
 
  ** Statistics from calculates_results_stats() function:
-N Images:  9  N Dog Images:  7  N NotDog Images:  2 
-Pct Corr dog:  85.7 Pct Corr NOTdog:  50.0  Pct Corr Breed:  57.1
+N Images:  9  N Dog Images:  6  N NotDog Images:  3 
+Pct Corr dog:  83.3 Pct Corr NOTdog:  33.3  Pct Corr Breed: 100.0
 
  ** Check Statistics - calculated from this function as a check:
-N Images:  9  N Dog Images:  7  N NotDog Images:  2 
-Pct Corr dog:  85.7 Pct Corr NOTdog:  50.0  Pct Corr Breed:  57.1
+N Images:  9  N Dog Images:  6  N NotDog Images:  3 
+Pct Corr dog:  83.3 Pct Corr NOTdog:  33.3  Pct Corr Breed:  83.3
 
 
 *** Results Summary for CNN Model Architecture VGG ***
  Number of Images:   9 
- Number of Dog Images:   7 
- Number of "Not-a" Dog Images:   2 
- % Correct Dogs: 85.7 
- % Correct Breed: 57.1 
- % Correct "Not-a" Dog: 50.0
+ Number of Dog Images:   6 
+ Number of "Not-a" Dog Images:   3 
+ % Correct Dogs: 83.3 
+ % Correct Breed: 100.0 
+ % Correct "Not-a" Dog: 33.3
 
 ** Total Elapsed Runtime: 0:0:1
