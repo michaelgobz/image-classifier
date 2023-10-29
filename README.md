@@ -54,3 +54,7 @@ They include the following information:
 ## License
 
 This project is licensed under the MIT License — see the LICENSE file for details.
+
+## Author
+
+Michael Goboola - [michaelgobz]("https://github.com/michaelgobz")
