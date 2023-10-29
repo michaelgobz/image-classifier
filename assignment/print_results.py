@@ -15,7 +15,7 @@
 #             function and results for the function call within main.
 #            -The results statistics dictionary as results_stats_dic within 
 #             print_results function and results_stats for the function call within main.
-#            -The CNN model architecture as model wihtin print_results function
+#            -The CNN model architecture as model within print_results function
 #             and in_arg.arch for the function call within main. 
 #            -Prints Incorrectly Classified Dogs as print_incorrect_dogs within
 #             print_results function and set as either boolean value True or 
@@ -42,7 +42,7 @@ def print_results(results_dic, results_stats_dic, model,
              (index)idx 0 = pet image label (string)
                     idx 1 = classifier label (string)
                     idx 2 = 1/0 (int)  where 1 = match between pet image and 
-                            classifer labels and 0 = no match between labels
+                            classifier labels and 0 = no match between labels
                     idx 3 = 1/0 (int)  where 1 = pet image 'is-a' dog and 
                             0 = pet Image 'is-NOT-a' dog. 
                     idx 4 = 1/0 (int)  where 1 = Classifier classifies image 
