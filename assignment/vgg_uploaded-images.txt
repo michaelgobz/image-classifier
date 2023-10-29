@@ -5,31 +5,25 @@ Command Line Arguments:
 
 Pet Image Label Dictionary has 9 key-value pairs.
 Below are 9 of them:
- 1 key: Basset_Fauve_de_Bretagne_12345.jpg  label:   basset fauve de bretagne
- 2 key: Basset_Fauve_de_Bretagne_6789.jpg  label:   basset fauve de bretagne
- 3 key: Belgian_German_shepherd_12345.jpeg  label:    belgian german shepherd
- 4 key: Belgian_German_shepherd_132345.jpeg  label:    belgian german shepherd
- 5 key: Belgian_Shepherd_Dog_Tervueren_7889.jpg  label: belgian shepherd dog tervueren
- 6 key:         black_maltese_0017.jpg  label:              black maltese
- 7 key:         Brown_Maltese_2452.jpg  label:              brown maltese
- 8 key:    Dachshund_Boerboel_0017.jpg  label:         dachshund boerboel
- 9 key:        French_bulldog_0017.jpg  label:             french bulldog
+ 1 key: Belgian_Shepherd_Dog_Tervueren_7889.jpg  label: belgian shepherd dog tervueren
+ 2 key:         black_maltese_0017.jpg  label:              black maltese
+ 3 key:         Brown_Maltese_2452.jpg  label:              brown maltese
+ 4 key:    Dachshund_Boerboel_0017.jpg  label:         dachshund boerboel
+ 5 key:        French_bulldog_0017.jpg  label:             french bulldog
+ 6 key:     German_shepherd_12345.jpeg  label:            german shepherd
+ 7 key:    German_shepherd_132345.jpeg  label:            german shepherd
+ 8 key:     golden_retriever_12345.jpg  label:           golden retriever
+ 9 key:      golden_retriever_6789.jpg  label:           golden retriever
 
      MATCH:
 
+    golden_retriever_12345.jpg: 
+Real:           golden retriever   Classifier:               golden retriever
+
+     golden_retriever_6789.jpg: 
+Real:           golden retriever   Classifier:               golden retriever
+
  NOT A MATCH:
-
-Basset_Fauve_de_Bretagne_12345.jpg: 
-Real:   basset fauve de bretagne   Classifier:               golden retriever
-
-Basset_Fauve_de_Bretagne_6789.jpg: 
-Real:   basset fauve de bretagne   Classifier:               golden retriever
-
-Belgian_German_shepherd_12345.jpeg: 
-Real:    belgian german shepherd   Classifier: german shepherd, german shepherd dog, german police dog, alsatian
-
-Belgian_German_shepherd_132345.jpeg: 
-Real:    belgian german shepherd   Classifier:                         kelpie
 
 Belgian_Shepherd_Dog_Tervueren_7889.jpg: 
 Real: belgian shepherd dog tervueren   Classifier:              eskimo dog, husky
@@ -46,28 +40,26 @@ Real:         dachshund boerboel   Classifier:    doberman, doberman pinscher
        French_bulldog_0017.jpg: 
 Real:             french bulldog   Classifier: staffordshire bullterrier, staffordshire bull terrier
 
-# Total Images 9 # Matches: 0 # NOT Matches: 9
-{'Basset_Fauve_de_Bretagne_12345.jpg': ['basset fauve de bretagne', 'golden retriever', 0, 0], 'Basset_Fauve_de_Bretagne_6789.jpg': ['basset fauve de bretagne', 'golden retriever', 0, 0], 'Belgian_German_shepherd_12345.jpeg': ['belgian german shepherd', 'german shepherd, german shepherd dog, german police dog, alsatian', 0, 0], 'Belgian_German_shepherd_132345.jpeg': ['belgian german shepherd', 'kelpie', 0, 0], 'Belgian_Shepherd_Dog_Tervueren_7889.jpg': ['belgian shepherd dog tervueren', 'eskimo dog, husky', 0, 0], 'black_maltese_0017.jpg': ['black maltese', 'bouvier des flandres, bouviers des flandres', 0, 0], 'Brown_Maltese_2452.jpg': ['brown maltese', 'yorkshire terrier', 0, 0], 'Dachshund_Boerboel_0017.jpg': ['dachshund boerboel', 'doberman, doberman pinscher', 0, 0], 'French_bulldog_0017.jpg': ['french bulldog', 'staffordshire bullterrier, staffordshire bull terrier', 0, 0]}
+    German_shepherd_12345.jpeg: 
+Real:            german shepherd   Classifier: german shepherd, german shepherd dog, german police dog, alsatian
+
+   German_shepherd_132345.jpeg: 
+Real:            german shepherd   Classifier:                         kelpie
+
+# Total Images 9 # Matches: 2 # NOT Matches: 7
+{'Belgian_Shepherd_Dog_Tervueren_7889.jpg': ['belgian shepherd dog tervueren', 'eskimo dog, husky', 0, 0], 'black_maltese_0017.jpg': ['black maltese', 'bouvier des flandres, bouviers des flandres', 0, 0], 'Brown_Maltese_2452.jpg': ['brown maltese', 'yorkshire terrier', 0, 0], 'Dachshund_Boerboel_0017.jpg': ['dachshund boerboel', 'doberman, doberman pinscher', 0, 0], 'French_bulldog_0017.jpg': ['french bulldog', 'staffordshire bullterrier, staffordshire bull terrier', 0, 0], 'German_shepherd_12345.jpeg': ['german shepherd', 'german shepherd, german shepherd dog, german police dog, alsatian', 0, 1], 'German_shepherd_132345.jpeg': ['german shepherd', 'kelpie', 0, 0], 'golden_retriever_12345.jpg': ['golden retriever', 'golden retriever', 1, 1], 'golden_retriever_6789.jpg': ['golden retriever', 'golden retriever', 1, 1]}
 
      MATCH:
 
+    golden_retriever_12345.jpg: 
+Real:           golden retriever   Classifier:               golden retriever  
+PetLabelDog: 1  ClassLabelDog: 1
+
+     golden_retriever_6789.jpg: 
+Real:           golden retriever   Classifier:               golden retriever  
+PetLabelDog: 1  ClassLabelDog: 1
+
  NOT A MATCH:
-
-Basset_Fauve_de_Bretagne_12345.jpg: 
-Real:   basset fauve de bretagne   Classifier:               golden retriever  
-PetLabelDog: 0  ClassLabelDog: 0
-
-Basset_Fauve_de_Bretagne_6789.jpg: 
-Real:   basset fauve de bretagne   Classifier:               golden retriever  
-PetLabelDog: 0  ClassLabelDog: 0
-
-Belgian_German_shepherd_12345.jpeg: 
-Real:    belgian german shepherd   Classifier: german shepherd, german shepherd dog, german police dog, alsatian  
-PetLabelDog: 0  ClassLabelDog: 0
-
-Belgian_German_shepherd_132345.jpeg: 
-Real:    belgian german shepherd   Classifier:                         kelpie  
-PetLabelDog: 0  ClassLabelDog: 0
 
 Belgian_Shepherd_Dog_Tervueren_7889.jpg: 
 Real: belgian shepherd dog tervueren   Classifier:              eskimo dog, husky  
@@ -89,4 +81,31 @@ PetLabelDog: 0  ClassLabelDog: 0
 Real:             french bulldog   Classifier: staffordshire bullterrier, staffordshire bull terrier  
 PetLabelDog: 0  ClassLabelDog: 1
 
-# Total Images 9 # Matches: 0 # NOT Matches: 9
+    German_shepherd_12345.jpeg: 
+Real:            german shepherd   Classifier: german shepherd, german shepherd dog, german police dog, alsatian  
+PetLabelDog: 1  ClassLabelDog: 0
+
+   German_shepherd_132345.jpeg: 
+Real:            german shepherd   Classifier:                         kelpie  
+PetLabelDog: 0  ClassLabelDog: 0
+
+# Total Images 9 # Matches: 2 # NOT Matches: 7
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  9  N Dog Images:  3  N NotDog Images:  6 
+Pct Corr dog:  66.7 Pct Corr NOTdog:  83.3  Pct Corr Breed:  66.7
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  9  N Dog Images:  3  N NotDog Images:  6 
+Pct Corr dog:  66.7 Pct Corr NOTdog:  83.3  Pct Corr Breed:  66.7
+
+
+*** Results Summary for CNN Model Architecture VGG ***
+ Number of Images:   9 
+ Number of Dog Images:   3 
+ Number of "Not-a" Dog Images:   6 
+ % Correct Dogs: 66.7 
+ % Correct Breed: 66.7 
+ % Correct "Not-a" Dog: 83.3
+
+** Total Elapsed Runtime: 0:59:58
