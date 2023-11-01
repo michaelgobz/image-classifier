@@ -45,7 +45,7 @@ def main():
     start_time = time()
 
     # TODO 1: Define get_input_args function within the file get_input_args.py
-    # This function retrieves 3 Command Line Arugments from user as input from
+    # This function retrieves 3 Command Line Arguments from user as input from
     # the user running the program from a terminal window. This function returns
     # the collection of these command line arguments from the function call as
     # the variable in_arg
@@ -61,10 +61,12 @@ def main():
     #             get_pet_labels(in_arg.dir)
     # This function creates the results dictionary that contains the results,
     # this dictionary is returned from the function call as the variable results
-    results = get_pet_labels(in_arg.dir)
+    results_vgg = get_pet_labels(in_arg.dir)
+    results_resnet = get_pet_labels(in_arg.dir)
+    results_alexnet = get_pet_labels(in_arg.dir)
 
     # Function that checks Pet Images in the results Dictionary using results
-    check_creating_pet_image_labels(results)
+    check_creating_pet_image_labels(results_vgg)
 
     # TODO 3: Define classify_images function within the file classiy_images.py
     # Once the classify_images function has been defined replace first 'None'
@@ -74,11 +76,10 @@ def main():
     #             classify_images(in_arg.dir, results, in_arg.arch)
     # Creates Classifier Labels with classifier function, Compares Labels,
     # and adds these results to the results dictionary - results
-    classify_images(in_arg.dir, results, in_arg.arch)
+    classify_images(in_arg.dir, results_vgg, in_arg.arch)
 
     # Function that checks Results Dictionary using results
-    check_classifying_images(results)
-    print(results)
+    check_classifying_images(results_vgg)
 
     # TODO 4: Define adjust_results4_isadog function within the file adjust_results4_isadog.py
     # Once the adjust_results4_isadog function has been defined replace 'None'
@@ -88,10 +89,10 @@ def main():
     # Adjusts the results dictionary to determine if classifier correctly
     # classified images as 'a dog' or 'not a dog'. This demonstrates if
     # model can correctly classify dog images as dogs (regardless of breed)
-    adjust_results4_isadog(results, in_arg.dogfile)
+    adjust_results4_isadog(results_vgg, in_arg.dogfile)
 
     # Function that checks Results Dictionary for is-a-dog adjustment using results
-    check_classifying_labels_as_dogs(results)
+    check_classifying_labels_as_dogs(results_vgg)
 
     # TODO 5: Define calculates_results_stats function within the file calculates_results_stats.py
     # This function creates the results statistics dictionary that contains a
@@ -99,10 +100,10 @@ def main():
     # dictionary is returned from the function call as the variable results_stats
     # Calculates results of run and puts statistics in the Results Statistics
     # Dictionary - called results_stats
-    results_stats = calculates_results_stats(results)
+    results_stats = calculates_results_stats(results_vgg)
 
     # Function that checks Results Statistics Dictionary using results_stats
-    check_calculating_results(results, results_stats)
+    check_calculating_results(results_vgg, results_stats)
 
     # TODO 6: Define print_results function within the file print_results.py
     # Once the print_results function has been defined replace 'None'
@@ -111,7 +112,7 @@ def main():
     #      print_results(results, results_stats, in_arg.arch, True, True)
     # Prints summary results, incorrect classifications of dogs (if requested)
     # and incorrectly classified breeds (if requested)
-    print_results(results, results_stats, in_arg.arch, True, True)
+    print_results(results_vgg, results_stats, in_arg.arch, True, True)
 
     # TODO 0: Measure total program runtime by collecting end time
     end_time = time()
