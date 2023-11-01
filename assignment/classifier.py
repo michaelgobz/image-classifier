@@ -37,7 +37,7 @@ def classifier(img_path, model_name):
     # v 0.4 & higher code changed 04/26/2018 by Jennifer S. to handle PyTorch upgrade
     pytorch_ver = __version__.split('.')
     
-    # pytorch versions 0.4 & hihger - Variable depreciated so that it returns
+    # pytorch versions 0.4 & higher - Variable depreciated so that it returns
     # a tensor. So to address tensor as output (not wrapper) and to mimic the 
     # affect of setting volatile = True (because we are using pretrained models
     # for inference) we can set requires_gradient to False. Here we just set 

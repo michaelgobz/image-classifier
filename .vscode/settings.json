@@ -2,15 +2,20 @@
     "cSpell.words": [
         "AIPND",
         "alexnet",
+        "argmax",
+        "autograd",
         "boerboel",
         "bouvier",
         "bouviers",
         "classiy",
+        "clsid",
         "convolutional",
         "densenet",
         "dogfile",
         "dognames",
         "flandres",
+        "imagenet",
+        "infile",
         "intropyproject",
         "isadog",
         "michaelgobz",
@@ -22,6 +27,8 @@
         "squeezenet",
         "tervueren",
         "torchvision",
-        "Udacity"
+        "Udacity",
+        "unsqueeze",
+        "wihtin"
     ]
 }

@@ -44,7 +44,7 @@ def print_results(results_dic, results_stats_dic, model,
              (index)idx 0 = pet image label (string)
                     idx 1 = classifier label (string)
                     idx 2 = 1/0 (int)  where 1 = match between pet image and 
-                            classifer labels and 0 = no match between labels
+                            classifier labels and 0 = no match between labels
                     idx 3 = 1/0 (int)  where 1 = pet image 'is-a' dog and 
                             0 = pet Image 'is-NOT-a' dog. 
                     idx 4 = 1/0 (int)  where 1 = Classifier classifies image 
