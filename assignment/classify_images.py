@@ -75,10 +75,19 @@ def classify_images(images_dir, results_dic, model):
             image_classification = classifier(image_path, model)
             if ',' in image_classification:
                 # add the account for multiple dog names
-                image_classification = image_classification.split(',')[0].lower().strip()
+                image_classification = image_classification.split(',')[
+                    0].lower().strip()
             else:
                 image_classification = image_classification.lower().strip()
-            if results_dic[filename][0] == image_classification:
+            if "," in image_classification:
+                for dog_name in image_classification.split(','):
+                    if dog_name.strip() in results_dic[filename][0]:
+                        match = 1
+                        break
+                    else:
+                        match = 0
+
+            elif results_dic[filename][0] == image_classification:
                 match = 1
             else:
                 match = 0
