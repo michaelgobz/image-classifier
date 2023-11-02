@@ -19,7 +19,7 @@ The data used to check to test the classifier is in folder `./assignment/pet_ima
 There are 3 command line arguments that can be used to change the behavior of the program:
 
 - `--dir`: path to the folder with the images
-- `--arch`: CNN model architecture to use for image classification the following architectures are supported: `resnet`, `alexnet`, `vgg`, `squeezenet`, `densenet`, `inception`
+- `--arch`: CNN model architecture to use for image classification the following architectures are supported: `resnet`, `alexnet`, `vgg`,
 - `--dogfile`: text file that contains all the valid dog names
 
 ## Usage
@@ -41,12 +41,9 @@ They include the following information:
 - the number of non-dog images
 - the number of matches between pet & classifier labels
 - the number of correctly classified dog images
-- the number of correctly classified non-dog images
 - the number of correctly classified breeds of dog images
 - the number of correctly classified not-a-dog images
 - the percentage of correctly classified dog images
-- the percentage of correctly classified breed of dog images
-- the percentage of correctly classified not-a-dog images
 - the percentage of correctly classified dog breed images
 - the percentage of correctly classified breed of dog images
 - the percentage of correctly classified not-a-dog images
