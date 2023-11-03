@@ -63,8 +63,6 @@ def main():
     # This function creates the results dictionary that contains the results,
     # this dictionary is returned from the function call as the variable results
     results_vgg = get_pet_labels(in_arg.dir)
-    results_resnet = get_pet_labels(in_arg.dir)
-    results_alexnet = get_pet_labels(in_arg.dir)
 
     # Function that checks Pet Images in the results Dictionary using results
     """ check suppressed for now"""
