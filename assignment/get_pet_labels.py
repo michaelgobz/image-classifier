@@ -50,8 +50,7 @@ def get_pet_labels(image_dir):
             results_dic[filename] = [pet_label]
         else:
             print('File {} is a systemic file'.format(filename))
-            pet_label = get_label_names(filename)
-            results_dic[filename] = results_dic[filename].append(pet_label)
+            continue
     return results_dic
 
 

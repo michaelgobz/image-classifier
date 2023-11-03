@@ -65,16 +65,27 @@ def print_results(results_dic, results_stats_dic, model,
     # Prints summary statistics over the run
     if print_incorrect_dogs and print_incorrect_breed:
         print("\n\n*** Results Summary for CNN Model Architecture",model.upper(),
-              "***\n Number of Images: {:>3d} \n Number of Dog Images: {:>3d} \n Number of \"Not-a\" Dog Images: {:>3d} \n % Correct Dogs: {:>3.1f} \n % Correct Breed: {:>3.1f} \n % Correct \"Not-a\" Dog: {:>3.1f}"
+              "***\n Number of Images: {:>3d} \
+              \n Number of Dog Images: {:>3d} \n \
+              Number of \"Not-a\" Dog Images: {:>3d} \n \
+              % Correct Dogs: {:>3.1f} \n \
+              % Correct Breed: {:>3.1f} \n \
+              % Correct \"Not-a\" Dog: {:>3.1f} \n \
+              % Matched labels: {:>3.1f}"
               .format(results_stats_dic['n_images'],
                       results_stats_dic['n_dogs_img'],
                       results_stats_dic['n_notdogs_img'],
                       results_stats_dic['pct_correct_dogs'],
                       results_stats_dic['pct_correct_breed'],
-                      results_stats_dic['pct_correct_notdogs']))
+                      results_stats_dic['pct_correct_notdogs'],
+                      results_stats_dic['pct_match']))
     elif print_incorrect_dogs:
         print("\n\n*** Results Summary for CNN Model Architecture",model.upper(),
-              "***\n Number of Images: {:>3d} \n Number of Dog Images: {:>3d} \n Number of \"Not-a\" Dog Images: {:>3d} \n % Correct Dogs: {:>3.1f} \n % Correct \"Not-a\" Dog: {:>3.1f}"
+              "***\n Number of Images: {:>3d} \n \
+                      Number of Dog Images: {:>3d} \n \
+                      Number of \"Not-a\" Dog Images: {:>3d} \n \
+                      % Correct Dogs: {:>3.1f} \n \
+                     % Correct \"Not-a\" Dog: {:>3.1f}"
               .format(results_stats_dic['n_images'],
                       results_stats_dic['n_dogs_img'],
                       results_stats_dic['n_notdogs_img'],
@@ -82,7 +93,11 @@ def print_results(results_dic, results_stats_dic, model,
                       results_stats_dic['pct_correct_notdogs']))
     elif print_incorrect_breed:
         print("\n\n*** Results Summary for CNN Model Architecture",model.upper(),
-              "***\n Number of Images: {:>3d} \n Number of Dog Images: {:>3d} \n Number of \"Not-a\" Dog Images: {:>3d} \n % Correct Dogs: {:>3.1f} \n % Correct Breed: {:>3.1f}"
+              "***\n Number of Images: {:>3d} \n \
+              Number of Dog Images: {:>3d} \n \
+              Number of \"Not-a\" Dog Images: {:>3d} \n \
+              % Correct Dogs: {:>3.1f} \n \
+              % Correct Breed: {:>3.1f}"
               .format(results_stats_dic['n_images'],
                       results_stats_dic['n_dogs_img'],
                       results_stats_dic['n_notdogs_img'],
@@ -90,9 +105,14 @@ def print_results(results_dic, results_stats_dic, model,
                       results_stats_dic['pct_correct_breed']))
     else:
         print("\n\n*** Results Summary for CNN Model Architecture",model.upper(),
-              "***\n Number of Images: {:>3d} \n Number of Dog Images: {:>3d} \n Number of \"Not-a\" Dog Images: {:>3d} \n % Correct Dogs: {:>3.1f}"
+              "***\n Number of Images: {:>3d} \n \
+              Number of Dog Images: {:>3d} \n \
+              Number of \"Not-a\" Dog Images: {:>3d} \n \
+              % Correct Dogs: {:>3.1f} \n \
+              % Matched Labels: {:>3.1f}"
               .format(results_stats_dic['n_images'],
                       results_stats_dic['n_dogs_img'],
                       results_stats_dic['n_notdogs_img'],
-                      results_stats_dic['pct_correct_dogs']))
+                      results_stats_dic['pct_correct_dogs'],
+                      results_stats_dic['pct_match']))
 
