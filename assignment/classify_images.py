@@ -24,6 +24,7 @@
 from os import listdir, path
 from classifier import classifier
 
+
 # TODO 3: Define classify_images function below, specifically replace the None
 #       below by the function definition of the classify_images function.
 #       Notice that this function doesn't return anything because the
@@ -70,36 +71,19 @@ def classify_images(images_dir, results_dic, model):
     """
     for filename in listdir(images_dir):
         match = None
-        if filename[0] != '.':
-            image_path = path.join(images_dir, filename)
-            image_classification = classifier(image_path, model)
-            if ',' in image_classification:
-                # add the account for multiple dog names
-                image_classification = image_classification.split(',')[0].lower().strip()
-            else:
-                image_classification = image_classification.lower().strip()
-            if "," in image_classification:
-                for dog_name in image_classification.split(','):
-                    if dog_name.strip() in results_dic[filename][0]:
-                        match = 1
-                        break
-                    else:
-                        match = 0
+        image_path = path.join(images_dir, filename)
+        image_classification = classifier(image_path, model)
+        image_classification = image_classification.lower().strip()
 
-            elif results_dic[filename][0] == image_classification:
-                match = 1
-            else:
-                match = 0
-            if filename in results_dic:
-                results_dic[filename].extend([image_classification])
-                results_dic[filename].extend([match])
-            else:
-                print('File {} not in the results dictionary'.format(filename))
-                results_dic[filename] = [image_classification]
-            if results_dic[filename][0] in image_classification:
-                results_dic[filename].extend([1])
-            else:
-                results_dic[filename].extend([0])
+        if results_dic[filename][0] == image_classification:
+            match = 1
         else:
-            print('File {} is a hidden file'.format(filename))
+            match = 0
+        if filename in results_dic:
+            results_dic[filename].extend([image_classification])
+            results_dic[filename].extend([match])
+        else:
+            print('File {} not in the results dictionary'.format(filename))
+            results_dic[filename] = [image_classification]
+
     return results_dic
