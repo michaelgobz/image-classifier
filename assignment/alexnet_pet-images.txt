@@ -1,11 +1,12 @@
 
 
 *** Results Summary for CNN Model Architecture ALEXNET ***
- Number of Images:  40 
- Number of Dog Images:  24 
- Number of "Not-a" Dog Images:  16 
- % Correct Dogs: 79.2 
- % Correct Breed: 79.2 
- % Correct "Not-a" Dog: 31.2
+ Number of Images:  40               
+ Number of Dog Images:  30 
+ Number of "Not-a" Dog Images:  10 
+ % Correct Dogs: 100.0 % 
+ % Correct Breed: 80.0 % 
+ % Correct "Not-a" Dog: 100.0 % 
+ % Matched labels: 75.0 %
 
 ** Total Elapsed Runtime: 0:0:1

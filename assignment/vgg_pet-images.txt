@@ -1,11 +1,12 @@
 
 
 *** Results Summary for CNN Model Architecture VGG ***
- Number of Images:  40 
- Number of Dog Images:  27 
- Number of "Not-a" Dog Images:  13 
- % Correct Dogs: 81.5 
- % Correct Breed: 81.5 
- % Correct "Not-a" Dog: 38.5
+ Number of Images:  40               
+ Number of Dog Images:  30 
+ Number of "Not-a" Dog Images:  10 
+ % Correct Dogs: 100.0 % 
+ % Correct Breed: 93.3 % 
+ % Correct "Not-a" Dog: 100.0 % 
+ % Matched labels: 87.5 %
 
-** Total Elapsed Runtime: 0:0:4
+** Total Elapsed Runtime: 0:0:5

@@ -1,11 +1,12 @@
 
 
 *** Results Summary for CNN Model Architecture RESNET ***
- Number of Images:  40 
- Number of Dog Images:  25 
- Number of "Not-a" Dog Images:  15 
- % Correct Dogs: 84.0 
- % Correct Breed: 84.0 
- % Correct "Not-a" Dog: 40.0
+ Number of Images:  40               
+ Number of Dog Images:  30 
+ Number of "Not-a" Dog Images:  10 
+ % Correct Dogs: 100.0 % 
+ % Correct Breed: 90.0 % 
+ % Correct "Not-a" Dog: 90.0 % 
+ % Matched labels: 82.5 %
 
 ** Total Elapsed Runtime: 0:0:1
