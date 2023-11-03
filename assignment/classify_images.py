@@ -75,7 +75,7 @@ def classify_images(images_dir, results_dic, model):
         image_classification = classifier(image_path, model)
         image_classification = image_classification.lower().strip()
 
-        if results_dic[filename][0] == image_classification:
+        if results_dic[filename][0] in image_classification:
             match = 1
         else:
             match = 0
