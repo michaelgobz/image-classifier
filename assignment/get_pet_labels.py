@@ -49,7 +49,7 @@ def get_pet_labels(image_dir):
             pet_label = get_label_names(filename)
             results_dic[filename] = [pet_label]
         else:
-            print('File {} already exists in the dictionary'.format(filename))
+            print('File {} is a systemic file'.format(filename))
             pet_label = get_label_names(filename)
             results_dic[filename] = results_dic[filename].append(pet_label)
     return results_dic
