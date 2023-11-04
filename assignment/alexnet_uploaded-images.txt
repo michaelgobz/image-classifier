@@ -1,12 +1,121 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = alexnet 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 9 key-value pairs.
+Below are 9 of them:
+ 1 key:  bouvier_des_flandres_0017.jpg  label:       bouvier des flandres
+ 2 key:     doberman_pinscher_0017.jpg  label:          doberman pinscher
+ 3 key:     German_shepherd_12345.jpeg  label:            german shepherd
+ 4 key:     golden_retriever_12345.jpg  label:           golden retriever
+ 5 key:      golden_retriever_6789.jpg  label:           golden retriever
+ 6 key:            great_dane_0017.jpg  label:                 great dane
+ 7 key:             kelpie_132345.jpeg  label:                     kelpie
+ 8 key:        sibirian_husky_7889.jpg  label:             sibirian husky
+ 9 key:     yorkshire_terrier_2452.jpg  label:          yorkshire terrier
+
+     MATCH:
+
+    doberman_pinscher_0017.jpg: 
+Real:          doberman pinscher   Classifier:    doberman, doberman pinscher
+
+    German_shepherd_12345.jpeg: 
+Real:            german shepherd   Classifier: german shepherd, german shepherd dog, german police dog, alsatian
+
+    golden_retriever_12345.jpg: 
+Real:           golden retriever   Classifier:               golden retriever
+
+     golden_retriever_6789.jpg: 
+Real:           golden retriever   Classifier:               golden retriever
+
+            kelpie_132345.jpeg: 
+Real:                     kelpie   Classifier:                         kelpie
+
+ NOT A MATCH:
+
+ bouvier_des_flandres_0017.jpg: 
+Real:       bouvier des flandres   Classifier: newfoundland, newfoundland dog
+
+           great_dane_0017.jpg: 
+Real:                 great dane   Classifier:               mexican hairless
+
+       sibirian_husky_7889.jpg: 
+Real:             sibirian husky   Classifier:              eskimo dog, husky
+
+    yorkshire_terrier_2452.jpg: 
+Real:          yorkshire terrier   Classifier:                       shih-tzu
+
+# Total Images 9 # Matches: 5 # NOT Matches: 4
+
+     MATCH:
+
+    doberman_pinscher_0017.jpg: 
+Real:          doberman pinscher   Classifier:    doberman, doberman pinscher  
+PetLabelDog: 1  ClassLabelDog: 1
+
+    German_shepherd_12345.jpeg: 
+Real:            german shepherd   Classifier: german shepherd, german shepherd dog, german police dog, alsatian  
+PetLabelDog: 0  ClassLabelDog: 1
+
+    golden_retriever_12345.jpg: 
+Real:           golden retriever   Classifier:               golden retriever  
+PetLabelDog: 1  ClassLabelDog: 1
+
+     golden_retriever_6789.jpg: 
+Real:           golden retriever   Classifier:               golden retriever  
+PetLabelDog: 1  ClassLabelDog: 1
+
+            kelpie_132345.jpeg: 
+Real:                     kelpie   Classifier:                         kelpie  
+PetLabelDog: 1  ClassLabelDog: 1
+
+ NOT A MATCH:
+
+ bouvier_des_flandres_0017.jpg: 
+Real:       bouvier des flandres   Classifier: newfoundland, newfoundland dog  
+PetLabelDog: 1  ClassLabelDog: 1
+
+           great_dane_0017.jpg: 
+Real:                 great dane   Classifier:               mexican hairless  
+PetLabelDog: 1  ClassLabelDog: 1
+
+       sibirian_husky_7889.jpg: 
+Real:             sibirian husky   Classifier:              eskimo dog, husky  
+PetLabelDog: 0  ClassLabelDog: 1
+
+    yorkshire_terrier_2452.jpg: 
+Real:          yorkshire terrier   Classifier:                       shih-tzu  
+PetLabelDog: 1  ClassLabelDog: 1
+
+# Total Images 9 # Matches: 5 # NOT Matches: 4
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  9  N Dog Images:  7  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog:   0.0  Pct Corr Breed:  71.4
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  9  N Dog Images:  7  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog:   0.0  Pct Corr Breed:  57.1
 
 
 *** Results Summary for CNN Model Architecture ALEXNET ***
- Number of Images:   9               
- Number of Dog Images:   7 
- Number of "Not-a" Dog Images:   2 
- % Correct Dogs: 100.0 % 
- % Correct Breed: 71.4 % 
- % Correct "Not-a" Dog: 0.0 % 
- % Matched labels: 55.6 %
+N Images            :   9
+N Dog Images        :   7
+N Not-Dog Images    :   2
+ 
+pct_match           : 55.6 %
+pct_correct_dogs    : 100.0 %
+pct_correct_breed   : 71.4 %
+pct_correct_notdogs : 0.0 %
+
+INCORRECT Dog/NOT Dog Assignments:
+Real:            german shepherd   Classifier: german shepherd, german shepherd dog, german police dog, alsatian
+Real:             sibirian husky   Classifier:              eskimo dog, husky
+
+INCORRECT Dog Breed Assignment:
+Real:       bouvier des flandres   Classifier: newfoundland, newfoundland dog
+Real:                 great dane   Classifier:               mexican hairless
+Real:          yorkshire terrier   Classifier:                       shih-tzu
 
 ** Total Elapsed Runtime: 0:0:0
