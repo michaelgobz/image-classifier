@@ -9,7 +9,7 @@ The data used to check to test the classifier is in folder `./assignment/pet_ima
 
 ## Requirements
 
-- Python 3.6 or higher
+- Python 3.6 and < 3.12.0
 - torch 2.0 or higher
 - torchvision 0.2.1 or higher
 - pillow 10.0 or higher
